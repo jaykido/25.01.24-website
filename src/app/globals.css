@@ -22,7 +22,8 @@ a {
 }
 
 .container {
-  /* background-color: gray; */
+  /* background-image: url('path/to/your/image.jpg');
+  background-size: cover; */
   width: 1536px;
   margin: auto;
   padding-left: 50px;
