@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.imageContainer {
+  flex: 1;
+  position: relative;
+}
+.image {
+  object-fit: contain;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.formContainer {
+  flex: 1;
+}
