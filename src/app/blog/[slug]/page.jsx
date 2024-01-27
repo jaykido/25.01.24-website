@@ -5,11 +5,9 @@ const SinglePostPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
-<<<<<<< HEAD
         <Image src="/post.png" alt="" fill />
       </div>
-      <div className={styles.textContainer}>SinglePostPage</div>
-=======
+      <div className={styles.textContainer}>
         <Image className={styles.img} src="/post.png" alt="" fill />
       </div>
       <div className={styles.textContainer}>
@@ -40,7 +38,6 @@ const SinglePostPage = () => {
           asperiores, minus temporibus debitis.
         </div>
       </div>
->>>>>>> master
     </div>
   );
 };
