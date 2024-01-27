@@ -42,8 +42,22 @@
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .container {
     flex-direction: column;
   }
+} */
+
+@media (max-width: 768px) {
+  .container {
+    display: block;
+    text-align: center;
+  }
+  /* .theImg {
+    object-fit: cover;
+  }
+  .imgContainer {
+    height: calc(100vh - 500px);
+    width: auto;
+  } */
 }

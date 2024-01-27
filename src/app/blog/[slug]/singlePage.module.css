@@ -53,12 +53,15 @@
 }
 
 @media (max-width: 768px) {
-  .imgContainer {
-    /* display: none; */
-  }
-
   .container {
     display: block;
-    /* flex-direction: column; */
+    text-align: center;
+  }
+  .theImg {
+    object-fit: cover;
+  }
+  .imgContainer {
+    height: calc(100vh - 500px);
+    width: auto;
   }
 }
