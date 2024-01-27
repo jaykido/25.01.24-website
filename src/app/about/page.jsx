@@ -15,8 +15,8 @@ const AboutPage = () => {
           defined processes to work and let that transform into innovative
           digital campaigns, results focused and visually appealing website
           designs, search campaigns, display campaigns, social media campaigns,
-          branding and more. We find our growth in our client's growth. We hold
-          ourselves to the highest standards of service levels and creative
+          branding and more. We find our growth in our client&apos;s growth. We
+          hold ourselves to the highest standards of service levels and creative
           excellence. We design to drive results and win awards and every client
           engagement is an opportunity to win. Regardless of the size of
           engagement, every client of ours can expect the best creatives and

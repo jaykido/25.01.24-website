@@ -1,4 +1,4 @@
-import PostCard from "@/components/PostCard/postCard";
+import PostCard from "@/components/postCard/postCard";
 import styles from "./blog.module.css";
 
 const BlogPage = () => {
