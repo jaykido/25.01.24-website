@@ -1,12 +1,18 @@
 import Image from "next/image";
 import styles from "./singlePage.module.css";
+import { getPost } from "@/lib/data";
 
-const SinglePostPage = () => {
+const SinglePostPage = async ({ params }) => {
+  const slug = params;
+  const post = await getPost(slug);
+
   return (
     <div className={styles.container}>
-      <div className={styles.imgContainer}>
-        <Image src="/post.png" alt="" fill className={styles.theImg} />
-      </div>
+      {post.img && (
+        <div className={styles.imgContainer}>
+          <Image src={post.img} alt="" fill className={styles.theImg} />
+        </div>
+      )}
       <div className={styles.textContainer}>
         <h1 className={styles.title}>title</h1>
         <div className={styles.detail}>
@@ -23,17 +29,12 @@ const SinglePostPage = () => {
           </div>
           <div className={styles.detailText}>
             <span className={styles.detailTitle}>Published</span>
-            <span className={styles.detailValue}>27.01.24</span>
+            <span className={styles.detailValue}>
+              {post.createdAt.toString()}
+            </span>
           </div>
         </div>
-        <div className={styles.content}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-          facilis, vel libero sunt nesciunt a soluta totam laboriosam cumque
-          sapiente possimus. Dignissimos facilis alias nam sit delectus adipisci
-          ipsum facere accusantium fugiat, cupiditate quis illo voluptate sed a
-          perspiciatis iste cumque expedita ratione provident blanditiis libero
-          asperiores, minus temporibus debitis.
-        </div>
+        <div className={styles.content}>{post.desc}</div>
       </div>
     </div>
   );
