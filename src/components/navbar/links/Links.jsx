@@ -4,6 +4,8 @@ import { useState } from "react";
 import styles from "./links.module.css";
 import NavbarLink from "./navbarLink/navbarLink";
 import Image from "next/image";
+import { handleLogout } from "@/lib/actions";
+import { auth } from "@/lib/auth";
 
 const links = [
   {
@@ -24,10 +26,9 @@ const links = [
   },
 ];
 
-const Links = () => {
+const Links = ({ session }) => {
   const [open, setOpen] = useState(false);
 
-  const session = true;
   const isAdmin = true;
 
   return (
@@ -36,13 +37,15 @@ const Links = () => {
         {links.map((link) => (
           <NavbarLink item={link} key={link.path} />
         ))}
-        {session ? (
+        {session?.user ? (
           <>
             {" "}
-            {isAdmin && (
+            {session.user?.isAdmin && (
               <NavbarLink item={{ title: "Admin", path: "/admin" }} />
             )}
-            <button className={styles.logout}>Logout</button>
+            <form action={handleLogout}>
+              <button className={styles.logout}>Logout</button>
+            </form>
           </>
         ) : (
           <NavbarLink item={{ title: "Login", path: "/login" }} />
