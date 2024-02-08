@@ -73,5 +73,6 @@ export const {
       }
       return true;
     },
+    authorized({ auth, requrst }) {},
   },
 });
